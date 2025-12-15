@@ -6,6 +6,8 @@ import { initialData } from "@/lib/db-data"
 import { ArrowRight, CheckCircle, ChevronDown, ChevronUp, Clock, Shield, Sparkles, Users, Award, Calendar } from "lucide-react"
 import { useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export default function Services() {
   const { services, company } = initialData
@@ -46,7 +48,7 @@ export default function Services() {
     
     <h1 className="text-5xl md:text-6xl  font-black mb-8 leading-tight text-balance tracking-tight">
       Professional{" "}
-      <span className="bg-gradient-to-r from-primary via-yellow-300 to-primary bg-clip-text text-transparent animate-gradient">
+      <span className="bg-primary bg-clip-text text-transparent animate-gradient">
         Cleaning Services
       </span>
       <br />
@@ -118,9 +120,7 @@ export default function Services() {
                 : "bg-accent/40 dark:bg-accent text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-600"
               }`}
           >
-            <span className={`text-xs font-bold ${selectedService === service.id ? 'text-slate-900' : 'text-primary'}`}>
-              #{service.id}
-            </span>
+           
             <span className="text-sm font-medium  ">{service.name}</span>
           </button>
         ))}
@@ -145,9 +145,7 @@ export default function Services() {
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    <div className="absolute top-6 left-6 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm px-4 py-2 rounded-lg">
-                      <span className="text-2xl font-black text-gray-900 dark:text-white">#{service.id.toString().padStart(2, '0')}</span>
-                    </div>
+                    
                   </div>
 
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -307,7 +305,7 @@ export default function Services() {
                   className={`bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-xl transition-all overflow-hidden group ${selectedService === service.id ? 'ring-2 ring-primary' : ''
                     }`}
                 >
-                  <div className="relative h-48 overflow-hidden bg-gradient-to-br from-slate-100 to-gray-100 dark:from-slate-700 dark:to-slate-800">
+                  <div className="relative h-96 overflow-hidden bg-gradient-to-br from-slate-100 to-gray-100 dark:from-slate-700 dark:to-slate-800">
                     <Image
                       src={service.image || "/placeholder.jpg"}
                       alt={service.name}
@@ -315,22 +313,20 @@ export default function Services() {
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
-                    <div className="absolute top-4 left-4 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm px-3 py-1 rounded-lg">
-                      <span className="font-bold text-gray-900 dark:text-white">#{service.id.toString().padStart(2, '0')}</span>
-                    </div>
+                    
                   </div>
 
                   <div className="p-6">
                     <h3 className="text-xl font-black mb-2">{service.name}</h3>
-                    <p className="text-primary font-bold text-sm mb-4">{service.description}</p>
-                    <p className="text-gray-700 dark:text-gray-300 text-sm mb-6 line-clamp-2">{service.details}</p>
+                    <p className="text-gray-600 font-medium text-sm mb-4">{service.description}</p>
+                    <p className="text-gray-500 dark:text-gray-300 text-sm mb-6 line-clamp-6">{service.details}</p>
 
                     <div className="space-y-4">
                       <button
                         onClick={() => setExpandedDetails(expandedDetails === service.id ? null : service.id)}
                         className="flex items-center justify-between w-full text-left"
                       >
-                        <span className="text-sm font-medium text-primary">View Details</span>
+                        <span className="text-sm font-medium my-4">View Details</span>
                         {expandedDetails === service.id ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
                       </button>
 
@@ -344,18 +340,15 @@ export default function Services() {
                     </div>
 
                     <div className="flex gap-3 mt-6">
-                      <button
-                        onClick={() => setSelectedService(service.id)}
+                   <Link href='/contact'>
+                      <Button
+                       
                         className="flex-1 bg-primary text-white font-bold py-4 px-4 rounded-lg hover:bg-yellow-400 transition text-center text-sm"
                       >
-                        Select Service
-                      </button>
-                      <a
-                        href={`tel:${company.phone}`}
-                        className="flex-1 border border-primary text-primary font-bold py-4 px-4 rounded-lg hover:bg-primary/10 transition text-center text-sm"
-                      >
-                        Quick Quote
-                      </a>
+                        Contact Us
+                      </Button>
+                   </Link>
+                     
                     </div>
                   </div>
                 </div>

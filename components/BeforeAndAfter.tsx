@@ -36,11 +36,7 @@ export default function BeforeAndAfter()  {
                   after: "/clean-commercial-kitchen-after.jpg",
                   title: "Kitchen Cleaning",
                 },
-                {
-                  before: "/construction-site-debris-before.jpg",
-                  after: "/clean-construction-site-after.jpg",
-                  title: "Post-Construction",
-                },
+           
                 {
                   before: "/dirty-sofa-upholstery-before.jpg",
                   after: "/clean-sofa-upholstery-after.jpg",

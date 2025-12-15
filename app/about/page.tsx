@@ -59,7 +59,7 @@ export default function About() {
     <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight text-balance">
       
       <span className="relative">
-        <span className="bg-gradient-to-r from-primary via-yellow-300 to-primary bg-clip-text text-transparent">
+        <span className="bg-primary bg-clip-text text-transparent">
           About Legit Cleaners
         </span>
        
@@ -72,21 +72,6 @@ export default function About() {
       Excellence in cleaning and fumigation services with over a decade of trusted service
     </p>
 
-    {/* Stats or key points */}
-    <div className="flex flex-wrap justify-center gap-8 md:gap-12 mt-12">
-      <div className="text-center">
-        <div className="text-3xl md:text-4xl font-bold text-primary">10+</div>
-        <div className="text-sm text-gray-300">Years Experience</div>
-      </div>
-      <div className="text-center">
-        <div className="text-3xl md:text-4xl font-bold text-primary">5,000+</div>
-        <div className="text-sm text-gray-300">Happy Clients</div>
-      </div>
-      <div className="text-center">
-        <div className="text-3xl md:text-4xl font-bold text-primary">24/7</div>
-        <div className="text-sm text-gray-300">Emergency Service</div>
-      </div>
-    </div>
 
     {/* CTA Button */}
     <div className="mt-12">

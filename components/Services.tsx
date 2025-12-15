@@ -2,6 +2,7 @@ import { initialData } from "@/lib/db-data";
 import { ArrowRight, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 export default function Services() {
   const { services } = initialData;
@@ -35,7 +36,7 @@ export default function Services() {
                 <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary/5 to-transparent rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-transform duration-500" />
                 
                 {/* Image Container */}
-                <div className="relative h-48 mb-6 rounded-xl overflow-hidden bg-gradient-to-br from-slate-100 to-gray-100 dark:from-slate-700 dark:to-slate-800 p-4">
+                <div className="relative h-96 mb-6 rounded-xl overflow-hidden bg-gradient-to-br from-slate-100 to-gray-100 dark:from-slate-700 dark:to-slate-800 p-4">
                   <Image 
                     src={service.image} 
                     alt={service.name}
@@ -46,10 +47,7 @@ export default function Services() {
                   {/* Overlay Gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
-                  {/* Service ID Badge */}
-                  <div className="absolute top-3 left-3 bg-white dark:bg-slate-900 text-gray-800 dark:text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
-                    #{service.id.toString().padStart(2, '0')}
-                  </div>
+            
                 </div>
 
                 {/* Content */}
@@ -63,25 +61,19 @@ export default function Services() {
                   
                   {/* Details Preview */}
                   <div className="mb-6">
-                    <p className="text-gray-500 dark:text-gray-500 text-xs font-medium mb-2">
-                      INCLUDES:
-                    </p>
+                   
                     <p className="text-gray-700 dark:text-gray-300 text-sm line-clamp-3">
                       {service.details}
                     </p>
                   </div>
-
-                  {/* CTA Button */}
-                  <Link
-                    href={`/services/${service.id}`}
-                    className="inline-flex items-center justify-between w-full px-4 py-3 bg-gradient-to-r from-primary to-primary/90 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 group/btn"
-                  >
-                    <span className="text-sm">View Details</span>
-                    <ArrowRight 
-                      size={16} 
-                      className="group-hover/btn:translate-x-1 transition-transform" 
-                    />
+                  <Link href='/services'>
+                    <Button className="mt-6 cursor-pointer" >
+                      Learn More
+                           </Button>
                   </Link>
+                 
+               
+
                 </div>
 
                 {/* Hover Border Effect */}

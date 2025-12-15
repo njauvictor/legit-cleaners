@@ -19,7 +19,7 @@
   --secondary-foreground: oklch(0.99 0 0);
   --muted: oklch(0.93 0 0);
   --muted-foreground: oklch(0.45 0 0);
-  --accent: #fbbf24; /* Gold accent */
+  --accent: #06b6d4; /* Gold accent */
   --accent-foreground: #000000; /* Black text on gold accent */
   --accent-foreground: oklch(0.99 0 0);
   --destructive: oklch(0.577 0.245 27.325);

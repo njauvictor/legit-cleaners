@@ -53,13 +53,13 @@ export default function Portfolio()  {
         {/* Projects Grid */}
        
           <div className="max-w-7xl mx-auto px-4">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-12">
               {filteredProjects.map((project) => (
                 <div
                   key={project.id}
                   className="group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all"
                 >
-                  <div className="relative h-64 overflow-hidden bg-slate-300">
+                  <div className="relative h-92 overflow-hidden bg-slate-300">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -72,12 +72,12 @@ export default function Portfolio()  {
                       </div>
                     </div>
                   </div>
-                  <div className="p-4">
+                  <div className="p-2">
                     <div className="flex justify-between items-center">
-                      <span className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-lg text-sm font-bold">
+                      <span className="inline-block px-2 py-2 rounded-lg text-sm font-bold text-gray-500 ">
                         {project.category}
                       </span>
-                      <span className="text-gray-600 dark:text-gray-400 font-medium">{project.date}</span>
+                      <span className="text-gray-500 text-sm dark:text-gray-400 font-medium">{project.date}</span>
                     </div>
                   </div>
                 </div>
