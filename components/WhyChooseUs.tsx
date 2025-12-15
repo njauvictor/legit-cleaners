@@ -1,5 +1,6 @@
 import { initialData } from "@/lib/db-data";
 import { Star, Zap, Shield, Award } from "lucide-react";
+import { StaggerAnimationWrapper } from "./ScrollAnimationWrapper";
 
 export default function WhyChooseUs() {
 
@@ -24,8 +25,9 @@ const { company } = initialData
                   </p>
                 </div>
     
-                <div className="grid md:grid-cols-4 gap-8">
-                  <div className="bg-secondary/10 dark:bg-slate-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+                <StaggerAnimationWrapper>
+                  <div className="grid md:grid-cols-4 gap-8">
+                    <div className="bg-secondary/10 dark:bg-slate-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
                     <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                       <Star className="text-primary" size={32} />
                     </div>
@@ -64,10 +66,10 @@ const { company } = initialData
                       Premium service at competitive prices, starting from {company.startingPrice}
                     </p>
                   </div>
-                </div>
+                  </div>
+                </StaggerAnimationWrapper>
               </div>
             </section>
             </>
   )
   }
-    

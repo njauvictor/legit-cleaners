@@ -1,6 +1,4 @@
-import { before } from "node:test";
-
-
+import { StaggerAnimationWrapper } from "./ScrollAnimationWrapper";
 
 export default function BeforeAndAfter()  {
 
@@ -18,8 +16,9 @@ export default function BeforeAndAfter()  {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {[
+            <StaggerAnimationWrapper>
+              <div className="grid md:grid-cols-2 gap-8">
+                {[
             
                 {
                   before: "/messy-home-before-cleaning.jpg",
@@ -56,8 +55,8 @@ export default function BeforeAndAfter()  {
                     after: "/after-sink.jpg",
                     title: "Sink Cleaning",
 
-                }
-              ].map((item, idx) => (
+                  }
+                ].map((item, idx) => (
                 <div key={idx} className="group">
                   <div className="relative h-96 rounded-xl overflow-hidden shadow-xl bg-slate-700">
                     <div className="absolute inset-0 flex">
@@ -90,9 +89,10 @@ export default function BeforeAndAfter()  {
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                  </div>
+                ))}
+              </div>
+            </StaggerAnimationWrapper>
           </div>
         </section>
         

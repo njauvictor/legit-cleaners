@@ -11,6 +11,8 @@ import WhyChooseUs from "@/components/WhyChooseUs"
 import Services from "@/components/Services"
 import BeforeAndAfter from "@/components/BeforeAndAfter"
 import Portfolio from "@/components/Portfolio"
+import ScrollAnimationWrapper from "@/components/ScrollAnimationWrapper"
+import { StaggerAnimationWrapper } from "@/components/ScrollAnimationWrapper"
 
 export default function Home() {
   const { home, services, company, projects } = initialData
@@ -57,23 +59,26 @@ export default function Home() {
 
         <Hero />
 
-        <WhyChooseUs />
+        <ScrollAnimationWrapper animationType="fade-up" threshold={0.05}>
+          <WhyChooseUs />
+        </ScrollAnimationWrapper>
 
-        <Services />
+        <ScrollAnimationWrapper animationType="fade-up" threshold={0.05} delay={100}>
+          <Services />
+        </ScrollAnimationWrapper>
 
+        <ScrollAnimationWrapper animationType="fade-left" threshold={0.1}>
+          <BeforeAndAfter />
+        </ScrollAnimationWrapper>
 
-      
-
-
-    
-<BeforeAndAfter />
-
-       
-     <Portfolio />
+        <ScrollAnimationWrapper animationType="fade-right" threshold={0.1} delay={200}>
+          <Portfolio />
+        </ScrollAnimationWrapper>
       
 
         {/* CTA SECTION */}
-        <section className="bg-accent/90 py-20 text-slate-900">
+        <ScrollAnimationWrapper animationType="scale" threshold={0.2}>
+          <section className="bg-accent/90 py-20 text-slate-900">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-12 lg:px-12 xl:px-20 text-center">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-balance">Ready for a Spotless Space?</h2>
             <p className="text-lg md:text-xl mb-8 text-balance opacity-90">
@@ -95,6 +100,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        </ScrollAnimationWrapper>
       </main>
       <Footer />
     </>

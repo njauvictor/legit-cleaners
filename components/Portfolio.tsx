@@ -2,8 +2,7 @@
 
 import { initialData } from "@/lib/db-data"
 import { useState } from "react"
-
-
+import { StaggerAnimationWrapper } from "./ScrollAnimationWrapper"
 
 export default function Portfolio()  {
     
@@ -51,7 +50,7 @@ export default function Portfolio()  {
         </section>
 
         {/* Projects Grid */}
-       
+        <StaggerAnimationWrapper>
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12">
               {filteredProjects.map((project) => (
@@ -92,6 +91,7 @@ export default function Portfolio()  {
               </div>
             )}
           </div>
+        </StaggerAnimationWrapper>
    
           </div>
         </section>

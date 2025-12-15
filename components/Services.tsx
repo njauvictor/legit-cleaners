@@ -3,6 +3,7 @@ import { ArrowRight, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { StaggerAnimationWrapper } from "./ScrollAnimationWrapper";
 
 export default function Services() {
   const { services } = initialData;
@@ -26,8 +27,9 @@ export default function Services() {
           </div>
 
           {/* Service Cards Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3  gap-6 md:gap-8">
-            {services.map((service) => (
+          <StaggerAnimationWrapper>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {services.map((service) => (
               <div
                 key={service.id}
                 className="group relative bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 dark:border-slate-700 overflow-hidden"
@@ -79,8 +81,9 @@ export default function Services() {
                 {/* Hover Border Effect */}
                 <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-primary/30 transition-all duration-300 pointer-events-none" />
               </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </StaggerAnimationWrapper>
 
           {/* Bottom CTA */}
           <div className="text-center mt-16 pt-8 border-t border-gray-200 dark:border-slate-700">
