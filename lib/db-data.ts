@@ -7,7 +7,7 @@ export const initialData = {
     tagline: "Premium Cleaning Services for Modern Living",
     phone: "0740 479 221",
     email: "Legitcleaning001@gmail.com",
-    location: "Nairobi, Kenya",
+    location: "Gill House, Moi Avenue, 1st Floor, Nairobi, Kenya",
     logo: "/logo-legit .svg",
     description: "Professional cleaning services delivering pristine spaces and exceptional results",
     startingPrice: "KSh 2,500",
