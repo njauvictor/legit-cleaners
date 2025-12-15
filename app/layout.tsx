@@ -10,7 +10,7 @@ const poppins = Poppins({ weight: ["400", "500", "600", "700"], subsets: ["latin
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Legit Cleaners | Professional Cleaning Services Nairobi",
+  title: "Legit Cleaners | Professional Cleaning Services Nairobi | Fumigation Services Nairobi",
   description:
     "Premium cleaning services for homes and businesses in Nairobi. Residential, commercial, carpet cleaning, and specialized services. Book your service today!",
   keywords: "cleaning services, professional cleaning, home cleaning, office cleaning, Nairobi, Kenya, carpet cleaning",
