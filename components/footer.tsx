@@ -52,6 +52,9 @@ export default function Footer() {
              TikTok
             </a>
           )}
+          {/* Location*/}
+
+          
 
 
 
@@ -59,6 +62,8 @@ export default function Footer() {
 
                
         </div> 
+
+        <p className="">Address: Gill House, Moi Avenue, 1st Floor, Nairobi, Kenya</p>
         
         </Link>
 
