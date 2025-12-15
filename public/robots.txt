@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/static/
+Disallow: /*.json$
+Disallow: /*.js$
+Disallow: /*.map$
+Disallow: /_next/data/
+Disallow: /_next/image/
+Disallow: /private/
+Disallow: /admin/
+
+# Crawl-delay: 10
+
+# Sitemap
+Sitemap: https://legit-cleaners.vercel.app/sitemap.xml
+Sitemap: /sitemap.xml
+
+# Host
+Host: legit-cleaners.vercel.app
