@@ -126,7 +126,9 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-slate-700 pt-8 text-center text-sm text-gray-400">
           <p>{footer.copyrightText}</p>
+          <p>Designed & Handcoded by <a href="https://www.mjinidigital.co.ke/">Mjini Digital</a></p>
         </div>
+
       </div>
     </footer>
   )
