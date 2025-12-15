@@ -10,7 +10,7 @@ export default function Header() {
   const { company } = initialData
 
   return (
-    <header className="sticky top-0 z-50 bg-white dark:bg-slate-900 shadow-md border-b border-sky-100 dark:border-slate-700">
+    <header className="w-full sticky top-0 z-50 bg-white dark:bg-slate-900 shadow-md border-b border-sky-100 dark:border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-12  flex items-center justify-between h-24">
         {/* Logo */}
         <Link href="/" className="flex flex-col group flex-shrink-0">

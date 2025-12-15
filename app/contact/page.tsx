@@ -65,7 +65,7 @@ Please contact me with a quote. Thank you!`
 
   return (
     <>
-      <Header />
+   
       <main className="overflow-hidden">
         {/* Hero Section */}
         <section className="relative min-h-[70vh] bg-gradient-to-br from-slate-900 via-slate-800 to-black text-white flex items-center justify-center overflow-hidden">

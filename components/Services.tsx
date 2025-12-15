@@ -3,7 +3,7 @@ import { ArrowRight, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { StaggerAnimationWrapper } from "./ScrollAnimationWrapper";
+import {  } from "./ScrollAnimationWrapper";
 
 export default function Services() {
   const { services } = initialData;
@@ -27,7 +27,7 @@ export default function Services() {
           </div>
 
           {/* Service Cards Grid */}
-          <StaggerAnimationWrapper>
+          <>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {services.map((service) => (
               <div
@@ -83,7 +83,7 @@ export default function Services() {
               </div>
               ))}
             </div>
-          </StaggerAnimationWrapper>
+          </>
 
           {/* Bottom CTA */}
           <div className="text-center mt-16 pt-8 border-t border-gray-200 dark:border-slate-700">

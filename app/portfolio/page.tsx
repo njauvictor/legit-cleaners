@@ -7,7 +7,7 @@ export default function PortfolioPage() {
 
   return (
     <>
-      <Header />
+  
       <main>
         {/* Hero Section - Full Screen */}
         <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-black text-white flex items-center justify-center overflow-hidden">

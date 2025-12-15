@@ -4,6 +4,7 @@ import { Poppins, Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import WhatsAppFloat from "@/components/WhatsAppFloat"
 import "./globals.css"
+import Header from "@/components/header"
 
 const poppins = Poppins({ weight: ["400", "500", "600", "700"], subsets: ["latin"] })
 const inter = Inter({ subsets: ["latin"] })
@@ -28,8 +29,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${poppins.className} antialiased `}>
+    <html lang="en" className="w-full">
+      <body className={`${poppins.className} antialiased overflow-x-hidden overflow-y-scroll scrollbar-none `}>
+           <Header />
         {children}
         <WhatsAppFloat />
         <Analytics />

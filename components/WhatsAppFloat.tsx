@@ -42,7 +42,7 @@ export default function WhatsAppFloat() {
 
   return (
     <div
-      className={`fixed bottom-6 right-6 z-50 transition-all duration-500 flex flex-col items-end gap-2 ${
+      className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 transition-all duration-500 flex flex-col items-end gap-2 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
@@ -52,7 +52,7 @@ export default function WhatsAppFloat() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className={`flex items-center justify-center w-14 h-14 rounded-full shadow-2xl transition-all duration-300 transform ${
+          className={`flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-2xl transition-all duration-300 transform ${
             whatsappHovered ? "scale-110 shadow-3xl" : "scale-100"
           }`}
           style={{
@@ -62,14 +62,14 @@ export default function WhatsAppFloat() {
           onMouseLeave={() => setWhatsappHovered(false)}
           aria-label="Chat with us on WhatsApp"
         >
-          <MessageCircle size={28} className="text-white" />
+          <MessageCircle size={24} className="text-white sm:size-28" />
         </a>
         
         {/* WhatsApp hover label */}
         {whatsappHovered && (
-          <div className="absolute right-16 top-1/2 transform -translate-y-1/2 bg-slate-900 text-white text-sm font-semibold px-3 py-2 rounded-lg shadow-lg whitespace-nowrap animate-fade-in">
+          <div className="absolute right-16 top-1/2  bg-slate-900 text-white text-sm font-semibold px-3 py-2 rounded-lg shadow-lg whitespace-nowrap animate-fade-in">
             Chat with us!
-            <div className="absolute right-[-6px] top-1/2 transform -translate-y-1/2 w-3 h-3 bg-slate-900 rotate-45"></div>
+            <div className="absolute  top-1/2 transform  w-3 h-3 bg-slate-900 rotate-45"></div>
           </div>
         )}
       </div>
@@ -77,7 +77,7 @@ export default function WhatsAppFloat() {
       {/* Call Button */}
       <a
         href={callUrl}
-        className={`flex items-center justify-center w-12 h-12 rounded-full shadow-xl transition-all duration-300 transform ${
+        className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-xl transition-all duration-300 transform ${
           callHovered ? "scale-110 shadow-2xl" : "scale-100"
         }`}
         style={{
@@ -87,7 +87,7 @@ export default function WhatsAppFloat() {
         onMouseLeave={() => setCallHovered(false)}
         aria-label="Call us"
       >
-        <Phone size={24} className="text-white" />
+        <Phone size={20} className="text-white sm:size-24" />
       </a>
 
       {/* Instagram Button */}
@@ -95,7 +95,7 @@ export default function WhatsAppFloat() {
         href={instagramUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`flex items-center justify-center w-12 h-12 rounded-full shadow-xl transition-all duration-300 transform ${
+        className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-xl transition-all duration-300 transform ${
           instagramHovered ? "scale-110 shadow-2xl" : "scale-100"
         }`}
         style={{
@@ -105,7 +105,7 @@ export default function WhatsAppFloat() {
         onMouseLeave={() => setInstagramHovered(false)}
         aria-label="Follow us on Instagram"
       >
-        <Instagram size={24} className="text-white" />
+        <Instagram size={20} className="text-white sm:size-24" />
       </a>
 
       {/* TikTok Button */}
@@ -113,7 +113,7 @@ export default function WhatsAppFloat() {
         href={tiktokUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`flex items-center justify-center w-12 h-12 rounded-full shadow-xl transition-all duration-300 transform ${
+        className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-xl transition-all duration-300 transform ${
           tiktokHovered ? "scale-110 shadow-2xl" : "scale-100"
         }`}
         style={{
@@ -123,7 +123,9 @@ export default function WhatsAppFloat() {
         onMouseLeave={() => setTiktokHovered(false)}
         aria-label="Follow us on TikTok"
       >
-        <TikTokIcon />
+        <div className="w-5 h-5 sm:w-6 sm:h-6">
+          <TikTokIcon />
+        </div>
       </a>
 
       {/* Facebook Button */}
@@ -131,15 +133,13 @@ export default function WhatsAppFloat() {
         href={facebookUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`flex items-center justify-center w-12 h-12 rounded-full shadow-xl transition-all duration-300 transform ${
+        className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-xl transition-all duration-300 transform ${
           facebookHovered ? "scale-110 shadow-2xl" : "scale-100"
         }`}
         style={{
           background: "linear-gradient(135deg, #1877f2, #1877f2)",
         }}
         onMouseEnter={() => setFacebookHovered(true)}
-        onMouseLeave={() => setFacebookHovered(false)}
-        aria-label="Follow us on Facebook"
       >
         <Facebook size={24} className="text-white" />
       </a>

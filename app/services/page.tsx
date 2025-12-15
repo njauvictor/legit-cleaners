@@ -16,7 +16,7 @@ export default function Services() {
 
   return (
     <>
-      <Header />
+ 
       <main className="overflow-hidden">
         {/* Hero Section - Full Screen */}
          <section className="relative min-h-screen text-white flex items-center justify-center overflow-hidden">
