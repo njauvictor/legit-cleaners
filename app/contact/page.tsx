@@ -211,7 +211,7 @@ Please contact me with a quote. Thank you!`
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className="w-full border-2 border-gray-300 dark:border-slate-600 dark:bg-slate-800 dark:text-white rounded-xl px-4 py-4 focus:border-primary focus:ring-2 focus:ring-primary/30 focus:outline-none transition"
-                        placeholder="John Doe"
+                        
                       />
                     </div>
 
@@ -225,7 +225,7 @@ Please contact me with a quote. Thank you!`
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full border-2 border-gray-300 dark:border-slate-600 dark:bg-slate-800 dark:text-white rounded-xl px-4 py-4 focus:border-primary focus:ring-2 focus:ring-primary/30 focus:outline-none transition"
-                        placeholder="john@example.com"
+                        
                       />
                     </div>
 
@@ -239,7 +239,7 @@ Please contact me with a quote. Thank you!`
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full border-2 border-gray-300 dark:border-slate-600 dark:bg-slate-800 dark:text-white rounded-xl px-4 py-4 focus:border-primary focus:ring-2 focus:ring-primary/30 focus:outline-none transition"
-                        placeholder="07XX XXX XXX"
+                        
                       />
                     </div>
 

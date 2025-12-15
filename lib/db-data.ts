@@ -61,7 +61,7 @@ export const initialData = {
     {
       heading: "Who We Are",
       content:
-        "Legit Cleaners is a trusted professional cleaning and pest control company established in 2019. We provide premium cleaning, fumigation, landscaping, and gardening solutions to residential, commercial, and institutional clients. Our services are designed to create clean, safe, and healthy environments that enhance comfort, productivity, and peace of mind.",
+        "Legit Cleaners is a trusted professional cleaning and pest control company established in 2018. We provide premium cleaning, fumigation, landscaping, and gardening solutions to residential, commercial, and institutional clients. Our services are designed to create clean, safe, and healthy environments that enhance comfort, productivity, and peace of mind.",
       image: "/about-pic.jpg",
     },
     {

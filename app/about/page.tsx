@@ -12,7 +12,7 @@ export default function About() {
 
   return (
     <>
-      <Header />
+    
       <main>
       {/* Hero Section - Full Screen with Background Image */}
 <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
