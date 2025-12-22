@@ -1,55 +1,19 @@
 "use client"
-
-import Header from "@/components/header"
 import Footer from "@/components/footer"
 import Link from "next/link"
 import { initialData } from "@/lib/db-data"
-import { ArrowRight, Play, Star, Zap, Shield, Award } from "lucide-react"
-import { useState } from "react"
+import { ArrowRight } from "lucide-react"
 import Hero from "@/components/Hero"
 import WhyChooseUs from "@/components/WhyChooseUs"
 import Services from "@/components/Services"
 import BeforeAndAfter from "@/components/BeforeAndAfter"
 import Portfolio from "@/components/Portfolio"
-import ScrollAnimationWrapper from "@/components/ScrollAnimationWrapper"
-import { StaggerAnimationWrapper } from "@/components/ScrollAnimationWrapper"
 
 export default function Home() {
-  const { home, services, company, projects } = initialData
-  const [activeTab, setActiveTab] = useState("all")
-  const [videoPlaying, setVideoPlaying] = useState<number | null>(null)
+  const { company } = initialData
 
-  const categories = ["all", "Commercial", "Residential", "Post-Construction", "Fumigation", "Upholstery"]
-  const filteredProjects = activeTab === "all" ? projects : projects.filter((p) => p.category === activeTab)
 
  
-
-  const testimonials = [
-    {
-      id: 1,
-      name: "James Kimani",
-      role: "Business Owner",
-      quote: "Legit  Cleaners transformed our office! Professional and affordable service.",
-      rating: 5,
-      video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    },
-    {
-      id: 2,
-      name: "Sarah Ochieng",
-      role: "Homeowner",
-      quote: "Best cleaning service in Nairobi. Highly recommended!",
-      rating: 5,
-      video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    },
-    {
-      id: 3,
-      name: "Peter Mutua",
-      role: "Restaurant Manager",
-      quote: "Reliable, professional, and they get every detail right.",
-      rating: 5,
-      video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    },
-  ]
 
  
   return (

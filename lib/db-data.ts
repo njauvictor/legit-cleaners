@@ -168,7 +168,7 @@ export const initialData = {
     "description": "Deep sanitization and refresh for your mattress",
     "details": "Professional steam cleaning to eliminate dust mites, dead skin cells, allergens, bacteria, and stains from your mattress. This service ensures a cleaner, healthier sleep environment and can extend the life of your mattress.",
     "detailedServiceContent": "Your mattress is one of the most used items in your home, and over time it becomes a reservoir for dust mites, their droppings, dead skin cells, sweat, and other allergens. Legit Cleaners' Mattress Cleaning and Steaming service is designed to tackle this hidden contamination. We begin by thoroughly vacuuming the entire mattress surface, sides, and edges with a high-powered vacuum featuring a HEPA filter to capture fine particulate matter. Next, we use a professional-grade steam cleaning machine. The combination of hot steam and gentle agitation penetrates deep into the mattress layers, killing dust mites and bacteria, and breaking down organic stains and odors. We pre-treat any visible stains, such as those from spills or bodily fluids, with enzymatic cleaners that break down the proteins without damaging the fabric. The steam process uses only hot water vapor, making it a chemical-free, eco-friendly sanitization method. After cleaning, we use industrial air movers to circulate air and ensure the mattress dries completely from the inside out, which is crucial to prevent mold growth. This deep cleaning not only refreshes your sleep surface, removing unpleasant odors, but also significantly reduces allergen load, which can lead to better sleep quality, especially for those with allergies or asthma. It's a vital service for maintaining a truly healthy bedroom.",
-    "image": "/Mattress3.jpg"
+    "image": "/mattress.jpg"
   },
   {
     "id": 8,
@@ -423,24 +423,10 @@ export const initialData = {
     category: "Post-Construction",
     date: "2024",
   },
+
+
   {
     id: 25,
-    title: "Residential Deep Clean",
-    description: "Full home transformation and sanitization",
-    image: "/residential4.jpg",
-    category: "Residential",
-    date: "2024",
-  },
-  {
-    id: 26,
-    title: "Mattress Cleaning",
-    description: "Deep mattress cleaning for healthier sleep",
-    image: "/mattress3.jpg",
-    category: "Residential",
-    date: "2024",
-  },
-  {
-    id: 27,
     title: "Toilet Cleaning",
     description: "Professional toilet cleaning and sanitation",
     image: "/toilet1.jpg",
