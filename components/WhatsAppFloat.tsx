@@ -9,16 +9,10 @@ export default function WhatsAppFloat() {
   const [isVisible, setIsVisible] = useState(false)
   const [whatsappHovered, setWhatsappHovered] = useState(false)
   const [callHovered, setCallHovered] = useState(false)
-  const [instagramHovered, setInstagramHovered] = useState(false)
-  const [tiktokHovered, setTiktokHovered] = useState(false)
-  const [facebookHovered, setFacebookHovered] = useState(false)
 
   // Use the WhatsApp URL from company social links
   const whatsappUrl = company.socialLinks.whatsapp
   const callUrl = `tel:${company.phone.replace(/\s/g, "")}`
-  const instagramUrl = company.socialLinks.instagram
-  const tiktokUrl = company.socialLinks.tiktok
-  const facebookUrl = company.socialLinks.facebook
 
   // Show the button after a short delay for better UX
   useEffect(() => {
@@ -90,59 +84,6 @@ export default function WhatsAppFloat() {
         <Phone size={20} className="text-white sm:size-24" />
       </a>
 
-      {/* Instagram Button */}
-      <a
-        href={instagramUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-xl transition-all duration-300 transform ${
-          instagramHovered ? "scale-110 shadow-2xl" : "scale-100"
-        }`}
-        style={{
-          background: "linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)",
-        }}
-        onMouseEnter={() => setInstagramHovered(true)}
-        onMouseLeave={() => setInstagramHovered(false)}
-        aria-label="Follow us on Instagram"
-      >
-        <Instagram size={20} className="text-white sm:size-24" />
-      </a>
-
-      {/* TikTok Button */}
-      <a
-        href={tiktokUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-xl transition-all duration-300 transform ${
-          tiktokHovered ? "scale-110 shadow-2xl" : "scale-100"
-        }`}
-        style={{
-          background: "linear-gradient(135deg, #000000, #25f4ee, #fe2c55)",
-        }}
-        onMouseEnter={() => setTiktokHovered(true)}
-        onMouseLeave={() => setTiktokHovered(false)}
-        aria-label="Follow us on TikTok"
-      >
-        <div className="w-5 h-5 sm:w-6 sm:h-6">
-          <TikTokIcon />
-        </div>
-      </a>
-
-      {/* Facebook Button */}
-      <a
-        href={facebookUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-xl transition-all duration-300 transform ${
-          facebookHovered ? "scale-110 shadow-2xl" : "scale-100"
-        }`}
-        style={{
-          background: "linear-gradient(135deg, #1877f2, #1877f2)",
-        }}
-        onMouseEnter={() => setFacebookHovered(true)}
-      >
-        <Facebook size={24} className="text-white" />
-      </a>
     </div>
   )
 }
