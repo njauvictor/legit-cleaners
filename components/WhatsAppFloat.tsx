@@ -68,22 +68,7 @@ export default function WhatsAppFloat() {
         )}
       </div>
 
-      {/* Call Button */}
-      <a
-        href={callUrl}
-        className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-xl transition-all duration-300 transform ${
-          callHovered ? "scale-110 shadow-2xl" : "scale-100"
-        }`}
-        style={{
-          background: "linear-gradient(135deg, #34b7f1, #34b7f1)",
-        }}
-        onMouseEnter={() => setCallHovered(true)}
-        onMouseLeave={() => setCallHovered(false)}
-        aria-label="Call us"
-      >
-        <Phone size={20} className="text-white sm:size-24" />
-      </a>
-
+  
     </div>
   )
 }
